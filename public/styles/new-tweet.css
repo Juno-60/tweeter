@@ -46,4 +46,10 @@ button {
   align-self: right;
 }
 
+.counter-neg {
+  font-family: 'Bungee', sans-serif;
+  color: #D00000;
+  align-self: right;
+}
+
 /* button type submit: */
