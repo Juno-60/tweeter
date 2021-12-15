@@ -17,8 +17,21 @@ html {
 body {
   color: #545149;
   background-color: #f4f1ec;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 24px;
 }
+
+main {
+  width: 90%;
+  
+  /* sets margin to be equal on both sides */
+  margin: auto;
+}
+
+/* nav {
+  font-family: 'Bungee', sans-serif;
+  font-size: 36px;
+} */
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
