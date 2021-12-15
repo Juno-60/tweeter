@@ -1,11 +1,15 @@
 $(document).ready(function() {
-  console.log('log this if it works');
+  console.log('first log: ', this);
 
-  $("#tweet-text").on('keypress', function() {
-    let number = 0;
-    console.log(number += 1); //The this keyword is a reference to the button
+  $("#tweet-text").on('input', function() {
+    // .closest looks for closest specified html element on DOM tree
+    // .find returns an array of specified elements
+    let counter = $(this).closest("form").find(".counter")[0];
+
+    counter.value = 140 - this.value.length;
+
   });
-  
+
 
 
 });
