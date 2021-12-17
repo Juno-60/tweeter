@@ -1,0 +1,61 @@
+.tweet-element {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid black;
+  height: 100%;
+  /* box-shadow: 5px 5px 2px grey; */
+}
+
+.tweet-header {
+  display: flex;
+  flex-direction: row;
+  background-color: #f4f1ec;
+  background-image: none;
+  height: 2.5em;
+  justify-content: space-between;
+  margin-top: 0.5em;
+}
+
+.tweet-icon-fullname {
+  padding: 0.4em;
+  opacity: 0.8;
+  margin: 0.6em;
+}
+
+.tweet-handle {
+  padding: 0.4em;
+  display: flex;
+  align-self: right;
+  opacity: 0.4;
+  margin-right: 0.6em;
+}
+
+.tweet-body {
+  margin: 0.4em;
+  display: flex;
+  align-items: center;
+  padding: 0.4em;
+  padding-bottom: 0.8em;
+  border-bottom: 3px solid black;
+  font-weight: bolder;
+}
+
+.tweet-footer {
+  padding: 0.2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 0.3em;
+}
+
+.time-posted {
+  margin-left: 1em;
+  font-size: 0.6em;
+}
+
+.social-icons {
+  margin-right: 1em;
+  font-size: 0.7em;
+}
