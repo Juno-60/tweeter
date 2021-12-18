@@ -14,12 +14,15 @@ $(document).ready(function() {
     e.preventDefault();
     // checks length and verifies text box has contents
     if ($('#tweet-text').val().length <= 140 && $('#tweet-text').val().length > 0) {
-      //ajax to append serialized contents of text box
+      //ajax to POST and parse ~serialized~ contents of text box
       $.ajax({
         url: '/tweets',
         method: 'POST',
         data: $('#tweetbtn').serialize(),
       }).then(() => {
+        // resets the text field, isn't that nice
+        $(this)[0].reset();
+        // runs loadTweets immediately upon completion of POST
         loadTweets()
       });
       // alerts for failed checks
@@ -76,6 +79,7 @@ $(document).ready(function() {
     </article>`
   };
 
+  // loads tweets from /tweets on each page load
   loadTweets();
 
 });
