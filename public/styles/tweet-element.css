@@ -1,3 +1,8 @@
+.tweet-container {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
 .tweet-element {
   margin-top: 2em;
   margin-bottom: 2em;
@@ -5,7 +10,10 @@
   flex-direction: column;
   border: 3px solid black;
   height: 100%;
-  /* box-shadow: 5px 5px 2px grey; */
+}
+
+.tweet-element:hover {
+  box-shadow: 5px 5px 2px #C3CAD1;
 }
 
 .tweet-header {
@@ -19,9 +27,13 @@
 }
 
 .tweet-icon-fullname {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
   padding: 0.4em;
   opacity: 0.8;
   margin: 0.6em;
+  margin-left: 0.2em;
 }
 
 .tweet-handle {
@@ -58,4 +70,9 @@
 .social-icons {
   margin-right: 1em;
   font-size: 0.7em;
+  color: #4056A1;
+}
+
+.fa-flag:hover, .fa-retweet:hover, .fa-heart:hover {
+  color: #BE9B25;
 }
