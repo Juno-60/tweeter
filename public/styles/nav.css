@@ -9,7 +9,7 @@ nav {
   padding-right: 1.5em;
   padding-left: 1.5em;
   padding-bottom: 0.7em;
-  z-index: 9998!important;
+  /* z-index: 9998!important; */
   position: fixed;
   top: 0;
 }
@@ -45,7 +45,7 @@ span {
   nav {
     height: 90px;
   }
-  
+
   #nav-spacer {
     height: 75px;
   }

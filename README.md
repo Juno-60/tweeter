@@ -1,18 +1,24 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+Tweeter is a simple, single-page Twitter "clone".
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
-
-## Getting Started
-
-1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
-2. Clone your repository onto your local device.
-3. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+While not particularly functional, this project is intended as an exercise in using HTML, CSS, JS, jQuery and AJAX front-end, and related Node and Express back-end. 
 
 ## Dependencies
 
 - Express
+- Body-Parser
+- Chance
+- MD5
 - Node 5.10.x or above
+
+## Project Description
+
+- User should start server by running the command "npm start" from the project root directory
+- Project then runs at localhost:8080 (can be changed from tweeter/server/index.js)
+- When text is entered into the input form, a character counter keeps track of the number of characters in the form
+- Upon a user's click input of the "tweet" button, the form is then submitted to /tweets, parsed and applied to the template, then immediately posted to the main page via an asynchronous function, provided it meets the following conditions: 
+  1. The "tweet" must contain at least 1 character.
+  2. The "tweet" must not contain in excess of 140 characters.
+  * If any of the two aforementioned conditions is not met, a relevant error is displayed until a tweet meeting the proper conditions is submitted.
+- Media queries are used for responsive design at two different sizes, with the cutoff for a wider desktop application being at the 1024px width mark. 
