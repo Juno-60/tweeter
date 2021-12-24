@@ -22,3 +22,8 @@ While not particularly functional, this project is intended as an exercise in us
   2. The "tweet" must not contain in excess of 140 characters.
   * If any of the two aforementioned conditions is not met, a relevant error is displayed until a tweet meeting the proper conditions is submitted.
 - Media queries are used for responsive design at two different sizes, with the cutoff for a wider desktop application being at the 1024px width mark. 
+
+## Some Pictures
+
+!["The default Mobile view (1023px width or less)"](https://raw.githubusercontent.com/Juno-60/tweeter/master/docs/mobile-view.png)
+!["The resized desktop view (1024px width or greater)"](https://raw.githubusercontent.com/Juno-60/tweeter/master/docs/desktop-view.png)
