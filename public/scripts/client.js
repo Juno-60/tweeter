@@ -3,10 +3,18 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-// const timeago = require("timeago");
 
 
 $(document).ready(function() {
+  
+  $(".error-message").hide();
+
+  // makes a safe lil' div container to hold greasy code, and grabs the contents from that as a STRING return value
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
 
   // controls submit function on "tweet" button
   $('#tweetbtn').submit(function(e){
@@ -22,14 +30,17 @@ $(document).ready(function() {
       }).then(() => {
         // resets the text field, isn't that nice
         $(this)[0].reset();
+        $(".error-message").slideUp();
         // runs loadTweets immediately upon completion of POST
         loadTweets()
       });
-      // alerts for failed checks
+      // slick error box displays for failed checks
     } else if ($('#tweet-text').val() === '') {
-      alert('that form is empty');
+      $("#blank-input").slideDown();
+      $("#over-limit").slideUp();
     } else if ($('#tweet-text').val().length > 140) {
-      alert('141 is too many characters');
+      $("#over-limit").slideDown();
+      $("#blank-input").slideUp();
     }
   })
 
@@ -58,19 +69,19 @@ $(document).ready(function() {
     <article class="tweet-element">
       <header class="tweet-header">
         <div class="tweet-icon-fullname">
-          <img src="${tweetData.user.avatars}" alt="Tweeter's Avatar">
-          ${tweetData.user.name}
+          <img src="${escape(tweetData.user.avatars)}" alt="Tweeter's Avatar">
+          ${escape(tweetData.user.name)}
         </div>
         <div class="tweet-handle">
-          ${tweetData.user.handle}
+          ${escape(tweetData.user.handle)}
         </div>
       </header>
       <div class ="tweet-body">
-        ${tweetData.content.text}
+        ${escape(tweetData.content.text)}
       </div>
       <footer class="tweet-footer">
         <div class="time-posted">
-          ${timeago.format(tweetData.created_at)}
+          ${escape(timeago.format(tweetData.created_at))}
         </div>
       <div class="social-icons">
         <i class="fas fa-flag"></i> | <i class="fas fa-retweet"></i> | <i class="fas fa-heart"></i>

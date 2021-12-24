@@ -8,3 +8,17 @@ header {
   background-color: #6688FF;
   background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
 }
+
+h2 {
+  color: azure;
+  font-weight: normal;
+}
+
+@media only screen and (min-width: 1024px) {
+  header {
+    display: flex;
+    float: left;
+    width: 40%;
+    margin: 5%;
+  }
+}

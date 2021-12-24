@@ -76,3 +76,19 @@
 .fa-flag:hover, .fa-retweet:hover, .fa-heart:hover {
   color: #BE9B25;
 }
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    float: right;
+    width: 50%;
+    padding: 1em;
+  }
+
+  .new-tweet {
+    width: 100%
+  }
+
+  .tweet-header {
+    width: 90%;
+  }
+}
