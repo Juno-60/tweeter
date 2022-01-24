@@ -4,9 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-
 $(document).ready(function() {
-  
   $(".error-message").hide();
 
   // makes a safe lil' div container to hold greasy code, and grabs the contents from that as a STRING return value
@@ -50,6 +48,7 @@ $(document).ready(function() {
       url: '/tweets',
       method: 'GET',
       success: (tweets) => {
+        $('.tweet-container').empty()
         renderTweets(tweets)
       },
     });
